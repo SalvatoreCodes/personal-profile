@@ -266,7 +266,54 @@
       </div>
     </div>
 
-    <div class="contact--container"></div>
+    <div class="contact--container">
+      <img
+        class="contact--background--image"
+        src="./assets/images/contacts background.avif"
+        alt="contact bakground"
+      />
+      <div class="contact--content--container">
+        <h1 data-aos="fade-right">Contacts</h1>
+        <div class="contact--content" data-aos="fade-right">
+          <div>
+            <img src="./assets/icons/phone.png" alt="phone" />
+            <a id="text-to-copy">+62 882-4621-8405</a>
+          </div>
+          <div>
+            <img src="./assets/icons/instagram icon.png" alt="instagram" />
+            <a href="https://www.instagram.com/benedict_goni/" target="_blank"
+              >Putra Goni</a
+            >
+          </div>
+          <div>
+            <img src="./assets/icons/github icon.png" alt="github" />
+            <a href="https://github.com/SalvatoreCodes" target="_blank"
+              >SalvatoreCodes</a
+            >
+          </div>
+          <div>
+            <img src="./assets/icons/linkedin.png" alt="linkedin" />
+            <a
+              href="https://www.linkedin.com/in/putra-goni-952478247/"
+              target="_blank"
+              >putra goni</a
+            >
+          </div>
+          <div>
+            <img src="./assets/icons/discord.png" alt="discord" />
+            <a id="text-to-copy">mynameisben4220</a>
+          </div>
+          <div>
+            <img src="./assets/icons/facebook.png" alt="facebook" />
+            <a
+              href="https://www.facebook.com/profile.php?id=61550007681364"
+              target="_blank"
+              >Putra Goni</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -282,6 +329,25 @@
           disableOnInteraction: false,
         },
       });
+
+      document
+        .getElementById("text-to-copy")
+        .addEventListener("click", function () {
+          // Create a temporary text area to hold the text to be copied
+          const tempTextArea = document.createElement("textarea");
+          tempTextArea.value = this.textContent; // Get the text content of the clicked element
+          document.body.appendChild(tempTextArea); // Append the text area to the body
+
+          // Select the text and copy it to the clipboard
+          tempTextArea.select();
+          document.execCommand("copy");
+
+          // Remove the temporary text area from the DOM
+          document.body.removeChild(tempTextArea);
+
+          // Optional: Notify the user that the text was copied
+          alert("Text copied to clipboard!");
+        });
     </script>
   </body>
 </html>
