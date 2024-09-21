@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Profile</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,56 +22,83 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <title>Personal Profile</title>
   </head>
   <body>
-    <div class="hero--container">
-      <img
-        class="hero--background--image transparent"
-        src="./assets/images/hero background.webp"
-        alt="hero background"
-      />
-      <div class="hero--name--container">
-        <h1>PUTRA GONI</h1>
-        <h1 class="transparent">PUTRA GONI</h1>
-        <h1 class="transparent">PUTRA GONI</h1>
-      </div>
+    <div class="hero--container" id="hero--container">
+      <div class="hero--content--container">
+        <img
+          class="hero--background--image transparent"
+          src="./assets/images/hero background.webp"
+          alt="hero background"
+        />
 
-      <div class="hero--profile--container">
-        <img class="profile" src="./assets/images/profile.png" alt="profile" />
-        <img class="profile" src="./assets/images/profile.png" alt="profile" />
-        <img class="profile" src="./assets/images/profile.png" alt="profile" />
-      </div>
-
-      <div class="hero--quote--socials--container">
-        <div class="hero--quote--containter">
-          <p>“A day without laughter is a day wasted.” ― Nicolas Chamfort</p>
+        <div class="hero--name--container">
+          <h1>PUTRA GONI</h1>
+          <h1 class="transparent">PUTRA GONI</h1>
+          <h1 class="transparent">PUTRA GONI</h1>
         </div>
-        <div class="hero--socials--container">
-          <a href="https://www.instagram.com/benedict_goni/" target="_blank">
-            <img src="./assets/icons/instagram icon.png" alt="instagram icon" />
-          </a>
-          <a href="https://github.com/SalvatoreCodes" target="_blank">
-            <img src="./assets/icons/github icon.png" alt="github icon" />
+
+        <div class="hero--profile--container">
+          <img
+            class="profile"
+            src="./assets/images/profile.png"
+            alt="profile"
+          />
+          <img
+            class="profile"
+            src="./assets/images/profile.png"
+            alt="profile"
+          />
+          <img
+            class="profile"
+            src="./assets/images/profile.png"
+            alt="profile"
+          />
+        </div>
+
+        <div class="hero--quote--socials--container">
+          <div class="hero--quote--containter">
+            <p>“A day without laughter is a day wasted.” ― Nicolas Chamfort</p>
+          </div>
+          <div class="hero--socials--container">
+            <a href="https://www.instagram.com/benedict_goni/" target="_blank">
+              <img
+                src="./assets/icons/instagram icon.png"
+                alt="instagram icon"
+              />
+            </a>
+            <a href="https://github.com/SalvatoreCodes" target="_blank">
+              <img src="./assets/icons/github icon.png" alt="github icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="hero--about--container">
+          <h1>Web, Mobile, Software Developer</h1>
+          <a href="#navigation--container">
+            <img src="./assets/icons/down arrow.png" alt="down arrow" />
           </a>
         </div>
-      </div>
-
-      <div class="hero--about--container">
-        <h1>Web, Mobile, Software Developer</h1>
-        <a href="#navigation--container">
-          <img src="./assets/icons/down arrow.png" alt="down arrow" />
-        </a>
       </div>
     </div>
 
     <div class="navigation--container" id="navigation--container">
-      <a data-aos="fade-up" href="#">About</a>
-      <a data-aos="fade-up" href="#">Works</a>
-      <a data-aos="fade-up" href="#">Experience</a>
-      <a data-aos="fade-up" href="#">Contact</a>
+      <a data-aos="fade-up" href="#about--container">About</a>
+      <a data-aos="fade-up" href="#works--container">Works</a>
+      <a data-aos="fade-up" href="#experience--container">Experience</a>
+      <a data-aos="fade-up" href="#contact--container">Contact</a>
     </div>
 
-    <div class="about--container">
+    <div class="back--to--top" data-aos="fade-right">
+      <a href="#hero--container"
+        ><button>
+          <img src="./assets/icons/up arrow.png" alt="back to top" /></button
+        >Back to top</a
+      >
+    </div>
+
+    <div class="about--container" id="about--container">
       <h1 class="about--me--header" data-aos="fade-right">About Me</h1>
       <div class="about--me--content">
         <p data-aos="fade-right">
@@ -101,52 +128,68 @@
       </div>
     </div>
 
-    <div class="works--container">
+    <div class="works--container" id="works--container">
       <h1 data-aos="fade-up">works</h1>
 
       <div data-aos="fade-up" class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img
-              src="./assets/images/curriculum vitae.png"
-              alt="curriculum vitae"
-            />
+            <a href="./ErrorPage.html">
+              <img
+                src="./assets/images/curriculum vitae.png"
+                alt="curriculum vitae"
+              />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./assets/images/kakaskasen satu.png"
-              alt="kakaskasen satu"
-            />
+            <a href="./ErrorPage.html">
+              <img
+                src="./assets/images/kakaskasen satu.png"
+                alt="kakaskasen satu"
+              />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="./assets/images/osis55.png" alt="osis 55" />
+            <a href="./ErrorPage.html">
+              <img src="./assets/images/osis55.png" alt="osis 55" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./assets/images/pelayanan umum kakaskasen satu.png"
-              alt="pelayanan umum kakaskasen satu"
-            />
+            <a href="./ErrorPage.html">
+              <img
+                src="./assets/images/pelayanan umum kakaskasen satu.png"
+                alt="pelayanan umum kakaskasen satu"
+              />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="./assets/images/ppdb.png" alt="ppdb" />
+            <a href="./ErrorPage.html">
+              <img src="./assets/images/ppdb.png" alt="ppdb" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="./assets/images/pplg.png" alt="pplg" />
+            <a href="./ErrorPage.html">
+              <img src="./assets/images/pplg.png" alt="pplg" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="./assets/images/ulp.png" alt="ulp" />
+            <a href="./ErrorPage.html">
+              <img src="./assets/images/ulp.png" alt="ulp" />
+            </a>
           </div>
           <div class="swiper-slide">
-            <img
-              src="./assets/images/warong bakar bakar.png"
-              alt="warong bakar bakar"
-            />
+            <a href="./ErrorPage.html">
+              <img
+                src="./assets/images/warong bakar bakar.png"
+                alt="warong bakar bakar"
+              />
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="experience--container">
+    <div class="experience--container" id="experience--container">
       <h1 data-aos="fade-left" class="experience--header">experience</h1>
 
       <div class="experience--skills--container">
@@ -175,7 +218,7 @@
               <p>
                 Saya belajar <b><i>CSS</i></b> karena <b><i>CSS</i></b> sudah
                 termasuk dalam <i>roadmap web development</i> waktu saya belajar
-                HTML
+                HTML.
               </p>
             </div>
             <div class="skills--card">
@@ -266,7 +309,7 @@
       </div>
     </div>
 
-    <div class="contact--container">
+    <div class="contact--container" id="contact--container">
       <img
         class="contact--background--image"
         src="./assets/images/contacts background.avif"
@@ -313,6 +356,7 @@
           </div>
         </div>
       </div>
+      <p class="watermark">Developed by @benedict_goni</p>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

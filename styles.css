@@ -23,55 +23,45 @@ html {
 
 body {
   background-color: var(--primary);
-  height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
   padding: 16px;
+  overflow-x: hidden;
   font-family: "Roboto", sans-serif;
 }
 body .hero--container {
-  height: 100%;
+  height: 95vh;
   width: 100%;
   border-radius: 32px;
-  background-color: var(--secondary);
+}
+body .hero--container .hero--content--container {
+  height: 100%;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  border-radius: 32px;
+  background-color: var(--secondary);
 }
-body .hero--container .hero--background--image {
+body .hero--container .hero--content--container .hero--background--image {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-body .hero--container .hero--name--container {
+body .hero--container .hero--content--container .hero--name--container {
   padding: 32px 0;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
-body .hero--container .hero--name--container h1 {
+body .hero--container .hero--content--container .hero--name--container h1 {
   font-family: "Teko", sans-serif;
   color: var(--primary);
   font-size: 16rem;
-  line-height: 12rem;
+  line-height: 11.5rem;
   text-align: center;
-  position: relative;
-  top: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: all 1s ease-out;
 }
-@starting-style {
-  body .hero--container .hero--name--container h1 {
-    top: 100%;
-  }
-}
-body .hero--container .hero--name--container h1:nth-child(2) {
-  transition: 1.75s;
-}
-body .hero--container .hero--name--container h1:nth-child(3) {
-  transition: 2.5s;
-}
-body .hero--container .profile {
+body .hero--container .hero--content--container .profile {
   position: absolute;
   height: 100%;
   -o-object-fit: contain;
@@ -85,25 +75,25 @@ body .hero--container .profile {
           user-select: none;
 }
 @starting-style {
-  body .hero--container .profile {
+  body .hero--container .hero--content--container .profile {
     margin-left: -64px;
     opacity: 0;
   }
 }
-body .hero--container .profile:nth-child(1) {
+body .hero--container .hero--content--container .profile:nth-child(1) {
   z-index: 3;
 }
-body .hero--container .profile:nth-child(2) {
+body .hero--container .hero--content--container .profile:nth-child(2) {
   left: 49%;
   z-index: 2;
   opacity: 0.5;
 }
-body .hero--container .profile:nth-child(3) {
+body .hero--container .hero--content--container .profile:nth-child(3) {
   z-index: 1;
   left: 48%;
   opacity: 0.25;
 }
-body .hero--container .hero--quote--socials--container {
+body .hero--container .hero--content--container .hero--quote--socials--container {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -115,25 +105,25 @@ body .hero--container .hero--quote--socials--container {
   gap: 8px;
   transition: all 1s ease-out;
 }
-body .hero--container .hero--quote--socials--container .hero--socials--container {
+body .hero--container .hero--content--container .hero--quote--socials--container .hero--socials--container {
   display: flex;
   gap: 12px;
 }
-body .hero--container .hero--quote--socials--container .hero--socials--container a {
+body .hero--container .hero--content--container .hero--quote--socials--container .hero--socials--container a {
   height: 32px;
   width: 32px;
   text-decoration: none;
 }
-body .hero--container .hero--quote--socials--container .hero--socials--container a img {
+body .hero--container .hero--content--container .hero--quote--socials--container .hero--socials--container a img {
   height: 100%;
   width: 100%;
 }
 @starting-style {
-  body .hero--container .hero--quote--socials--container {
+  body .hero--container .hero--content--container .hero--quote--socials--container {
     left: -25%;
   }
 }
-body .hero--container .hero--about--container {
+body .hero--container .hero--content--container .hero--about--container {
   position: absolute;
   bottom: 32px;
   right: 32px;
@@ -147,24 +137,24 @@ body .hero--container .hero--about--container {
   gap: 16px;
   transition: all 1s ease-out;
 }
-body .hero--container .hero--about--container a {
+body .hero--container .hero--content--container .hero--about--container a {
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
 }
-body .hero--container .hero--about--container a img {
+body .hero--container .hero--content--container .hero--about--container a img {
   height: 32px;
   width: 32px;
   transition: all 0.5s ease-out;
 }
-body .hero--container .hero--about--container a:hover img {
+body .hero--container .hero--content--container .hero--about--container a:hover img {
   rotate: 360deg;
   scale: 1.1;
 }
 @starting-style {
-  body .hero--container .hero--about--container {
+  body .hero--container .hero--content--container .hero--about--container {
     right: -25%;
   }
 }
@@ -182,8 +172,30 @@ body .navigation--container a:hover {
   scale: 1.2;
   rotate: 8deg;
 }
+body .back--to--top {
+  z-index: 10000;
+  position: sticky;
+  top: 16px;
+}
+body .back--to--top a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+body .back--to--top a button {
+  border-radius: 100%;
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-color: var(--primary);
+  vertical-align: middle;
+  margin-right: 4px;
+  cursor: pointer;
+}
+body .back--to--top a button img {
+  height: 100%;
+  width: 100%;
+}
 body .about--container {
-  padding: 32px 0;
   max-width: 768px;
   display: flex;
   flex-direction: column;
@@ -240,7 +252,6 @@ body .works--container .swiper .swiper-slide img {
 body .experience--container {
   margin: auto;
   max-width: 768px;
-  padding: 32px 0;
   color: var(--secondary);
 }
 body .experience--container h1 {
@@ -306,7 +317,7 @@ body .contact--container {
   width: 100%;
   background-color: var(--secondary);
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-top: 32px;
   overflow: hidden;
   position: relative;
   color: var(--primary);
@@ -353,4 +364,8 @@ body .contact--container .contact--content--container .contact--content div a {
   cursor: pointer;
   font-weight: bold;
   letter-spacing: 2px;
+}
+body .contact--container .watermark {
+  float: right;
+  margin: 16px;
 }/*# sourceMappingURL=styles.css.map */
