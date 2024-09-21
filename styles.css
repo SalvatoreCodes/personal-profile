@@ -27,6 +27,7 @@ body {
   padding: 16px;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 body .hero--container {
   height: 95vh;
@@ -60,6 +61,13 @@ body .hero--container .hero--content--container .hero--name--container h1 {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  transition: margin-top 1s ease-out, opacity 1s ease-out;
+}
+@starting-style {
+  body .hero--container .hero--content--container .hero--name--container h1 {
+    margin-top: 50vh;
+    opacity: 0;
+  }
 }
 body .hero--container .hero--content--container .profile {
   position: absolute;
@@ -260,7 +268,6 @@ body .experience--container h1 {
 }
 body .experience--container .experience--header {
   text-align: end;
-  text-decoration: underline;
 }
 body .experience--container .experience--skills--container {
   margin-top: 32px;
@@ -305,6 +312,9 @@ body .experience--container .experience--skills--container .skills--container .s
 }
 body .experience--container .experience--work--container {
   margin-top: 32px;
+}
+body .experience--container .experience--work--container h1 {
+  text-align: center;
 }
 body .experience--container .experience--work--container ul {
   margin-left: 32px;

@@ -27,6 +27,7 @@ body {
   padding: 16px;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 
   .hero--container {
     height: 95vh;
@@ -59,6 +60,12 @@ body {
           line-height: 11.5rem;
           text-align: center;
           user-select: none;
+          transition: margin-top 1s ease-out, opacity 1s ease-out;
+
+          @starting-style {
+            margin-top: 50vh;
+            opacity: 0;
+          }
         }
       }
 
@@ -281,7 +288,6 @@ body {
 
     .experience--header {
       text-align: end;
-      text-decoration: underline;
     }
 
     .experience--skills--container {
@@ -334,6 +340,10 @@ body {
     }
     .experience--work--container {
       margin-top: 32px;
+
+      h1 {
+        text-align: center;
+      }
 
       ul {
         margin-left: 32px;
